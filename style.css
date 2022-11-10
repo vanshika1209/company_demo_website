@@ -1,0 +1,829 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+.parallax {
+
+    background-image: linear-gradient(rgb(14, 42, 42, 1), rgb(14, 42, 42, .6), rgba(14, 42, 42, 0.4)), url("pexels-daniel-eliashevsky-6942359.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logo {
+    background-image: linear-gradient(to right top, #73f4ef, #2ed8eb, hsl(178, 43%, 29%), #173239, #055254);
+    background-size: 50% auto;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    animation: gradientAnim 7.5s ease alternate infinite;
+}
+
+
+@keyframes gradientAnim {
+    to {
+        background-position: 100% top;
+    }
+}
+
+nav {
+    display: flex;
+    padding: 2% 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    color: #fff;
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-links ul li a:hover {
+    color: aqua;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: aqua;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.auto-input {
+    color: aqua;
+}
+
+.text-box h1 {
+    font-size: 60px;
+}
+
+.text-box p {
+    font-size: 15px;
+    margin: 10px 0 40px;
+    color: #fff;
+    line-height: 3;
+}
+
+
+.get1 .fa {
+    display: none;
+}
+
+@media(max-width:700px) {
+    .text-box h1 {
+        font-size: 25px;
+    }
+
+    .text-box p {
+        font-size: 15px;
+    }
+
+    .nav-links ul li {
+        display: block;
+        font-size: small;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: black;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .get1 .fa {
+        display: block;
+        color: #f0f0f0;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+
+    }
+}
+
+/*-----------------------------------about section------------------------------------------------------*/
+.about {
+    background-color: rgb(14, 42, 42);
+}
+
+.heading {
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 40px;
+}
+
+.about-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.ab-image {
+    flex: 1 1 30rem;
+}
+
+.ab-image img {
+    width: 100%;
+    height: 70vh;
+    border: 4px solid rgb(26, 74, 74);
+    border-radius: 8px;
+}
+
+.ab-image img:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
+    box-shadow: 0 0 40px 0px rgba(230, 228, 228, 0.2),
+        0 0 60px 0px rgba(167, 238, 226, 0.2),
+        0 0 120px 0px rgba(170, 246, 244, 0.2);
+}
+
+.ab-content {
+
+    flex: 1 1 45rem;
+}
+
+.ab-content p {
+    color: white;
+    padding: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-right: 2px;
+}
+
+@media(max-width:700px) {
+    .about-row {
+        flex-direction: column;
+        
+    }
+
+    .ab-image img {
+        height: 40vh;
+    }
+    
+}
+
+/*-----------------------------------why us section------------------------------------------------------*/
+
+.why {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.why-col {
+    flex-basis: 31%;
+    background-color: rgb(14, 42, 42);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.why-col i {
+    color: #fff;
+    font-size: larger;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.why-col p {
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0;
+    color: #fff;
+    font-size: 13px;
+}
+
+.why-col:hover {
+    background-color: transparent;
+    color: aqua;
+    box-shadow: 0 0 40px 0px rgba(243, 242, 243, 0.2);
+}
+
+.why-col:hover i {
+    color: aqua;
+}
+
+@media(max-width:700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/*-------------------------------------------------team  sections-----------------------------------------------*/
+.myt {
+    background-color: rgb(14, 42, 42);
+}
+
+.team {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+
+}
+
+.team-row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.team-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-col img {
+    width: 100%;
+    height: 70vh;
+    display: block;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+}
+
+.layer:hover {
+    background: rgba(14, 42, 42, 0.7);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+
+.layer:hover h3 {
+    bottom: 45%;
+    opacity: 1;
+}
+
+.layer p {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 16px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: .5s;
+}
+
+.layer:hover p {
+    bottom: 38%;
+    opacity: 1;
+}
+
+@media(max-width:730px) {
+
+    .team-row {
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+
+    .team-col img {
+        width: 100%;
+        height: 50vh;
+        display: block;
+    }
+}
+
+/*--------------------------------------------------services sections-----------------------------------------------*/
+.services {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+    padding-top: 50px;
+    display: flex;
+
+}
+
+.services h3 {
+    color: cyan;
+    margin-bottom: 30px;
+    letter-spacing: 6px;
+}
+
+.services h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 44px;
+    letter-spacing: 4px;
+
+}
+
+.ser-right {
+    flex: 1 1 61%;
+}
+
+.ser-right p {
+    padding-top: 70px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.services-row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.services-col {
+    flex-basis: 20%;
+    background-color: rgb(14, 42, 42);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: .7s;
+}
+
+.services-col .img {
+    margin-left: 20px;
+    font-size: 60px;
+    color: aqua;
+    font-weight: lighter;
+    transition: 1s;
+}
+
+.services-col h2 {
+    margin-left: 20px;
+    color: #fff;
+    font-weight: lighter;
+    padding-bottom: 15px;
+}
+
+.services-col p {
+    margin-left: 20px;
+    color: #fff;
+    font-size: 12px;
+    padding-bottom: 15px;
+}
+
+.services-col:hover {
+    box-shadow: 0 0 40px 0px rgba(252, 248, 252, 0.2),
+        0 0 40px 0px rgba(252, 248, 252, 0.2),
+        0 0 40px 0px rgba(252, 248, 252, 0.2);
+    background: transparent;
+}
+
+.services-col:hover h2 {
+    color: white;
+    animation-name: springy-text;
+    animation-duration: .5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes springy-text {
+    0% {
+        letter-spacing: .5em;
+        color: aliceblue;
+    }
+
+    100% {
+        letter-spacing: .05em;
+        color: cyan;
+    }
+}
+
+@media(max-width:730px) {
+    .services {
+        padding: 2rem;
+        flex-direction: column;
+    }
+
+    .services-row {
+        padding: 0 2rem;
+        flex-direction: column;
+    }
+
+    .services h1 {
+
+        font-size: 30px;
+        letter-spacing: 4px;
+
+    }
+}
+
+
+.parallax1 {
+
+    background-image: linear-gradient(rgb(14, 42, 42, 0.4), rgba(14, 42, 42, 0.7)), url("https://w0.peakpx.com/wallpaper/43/427/HD-wallpaper-black-neon-s-abstract-blue-edge-gold-gray-lines-star-stars-triangle.jpg");
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/*---------------------------------------------testimonial sections-----------------------------------------------*/
+.review {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.box-container{
+    margin-top: 5%;
+    justify-content: space-around;
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+  }
+  
+  .box {
+    flex-basis: 32%;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    margin-right: 2%;
+    margin-left: 2%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background: rgb(14, 42, 42);
+    padding: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 50%;
+  }
+  
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  .box {
+    animation: scroll 4s linear infinite;
+  }
+  .box-container:hover .box {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll-abs {
+    from {
+      transform: translateX(calc(100% + var(--gap)));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+ .box img {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+.box h3 {
+    color: #fff;
+    font-size: 25px;
+    padding: 15px 0;
+}
+.box .stars i {
+    color: cyan;
+    font-size: 15px;
+}
+.box .text {
+    color: #fff;
+    line-height: 1;
+    font-size: 15px;
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+
+
+/*--------------------------------------------contact section start-----------------------------------------------*/
+.contact {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.contact h1 {
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+iframe {
+    width: 100%;
+
+    align-items: center;
+
+}
+
+.contacts-us {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont {
+    display: flex;
+}
+
+.cont-row {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 48%;
+    margin-bottom: 30px;
+
+}
+
+.cont-row div {
+    display: flex;
+    align-items: left;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.contacts-col i {
+    font-size: 15px;
+    color: cyan;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contacts-col h5 {
+    font-size: 15px;
+    color: cyan;
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.cont-row input,
+.cont-row textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    background-color: rgb(14, 42, 42);
+    color: #fff;
+    border: 2px solid cyan;
+    box-sizing: border-box;
+}
+
+.red-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1.5px solid cyan;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+}
+
+.red-btn:hover {
+    border: 3px solid white;
+    background: rgb(14, 42, 42);
+    color: #fff;
+    font-size: medium;
+    transition: 0.3s;
+}
+
+@media(max-width:700px) {
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+
+
+/*---------------------------------------------footer sections-----------------------------------------------*/
+
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    padding: 30px 0;
+    background-color: rgb(22, 41, 41);
+    padding-top: 100px;
+    padding-bottom: 160px;
+}
+
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.footer h2 {
+    background-image: linear-gradient(to right top, #73f4ef, #2ed8eb, hsl(178, 43%, 29%), #173239, #055254);
+    background-size: 50% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    animation: gradientAnim 7.5s ease alternate infinite;
+
+}
+
+
+@keyframes gradientAnim {
+    to {
+        background-position: 100% top;
+    }
+}
+
+.footer p {
+    color: #fff;
+    padding-bottom: 50px;
+    text-transform: capitalize;
+}
+
+.footer .links a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 13px;
+    padding: 20px;
+    padding-bottom: 50px;
+
+}
+
+.footer .links a:hover {
+    color: cyan;
+    font-size: 20px;
+}
+
+.footer-newsletter h3 {
+    padding-top: 50px;
+    color: #fff;
+    font-size: 30px;
+
+}
+
+.footer-newsletter p {
+    color: #73f4ef;
+    padding-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.form input {
+    background-color: #173239;
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.foot {
+    width: 100%;
+    margin: auto;
+    text-align: left;
+    display: flex;
+    background-color: rgba(11, 11, 11, 0.9);
+    justify-content: space-between;
+
+}
+
+.foot p {
+    padding-top: 20px;
+    color: white;
+}
+
+.fa {
+    padding-top: 40px;
+    align-items: center;
+    color: #fff;
+    padding-right: 20px;
+
+}
+
+.fa:hover {
+    color: cyan;
+}
+
+@media(max-width:700px) {
+    .footer h2 {
+        font-size: 40px;
+    }
+
+    .foot {
+        flex-direction: column;
+    }
+}
